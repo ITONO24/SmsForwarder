@@ -1159,6 +1159,8 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding?>(), View.OnClickL
         rgMainLanguages.check(
             if (MultiLanguages.isSystemLanguage(context)) {
                 R.id.rb_main_language_auto
+            } else if (MultiLanguages.getAppLanguage(context).language == "fr") {
+                R.id.rb_main_language_fr
             } else {
                 when (MultiLanguages.getAppLanguage(context)) {
                     LocaleContract.getSimplifiedChineseLocale() -> R.id.rb_main_language_cn
@@ -1197,6 +1199,12 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding?>(), View.OnClickL
                 R.id.rb_main_language_en -> {
                     // 英语
                     newLang = LocaleContract.getEnglishLocale()
+                    MultiLanguages.setAppLanguage(context, newLang)
+                }
+
+                R.id.rb_main_language_fr -> {
+                    // Français
+                    newLang = Locale.FRANCE
                     MultiLanguages.setAppLanguage(context, newLang)
                 }
             }

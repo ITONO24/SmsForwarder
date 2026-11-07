@@ -2041,6 +2041,11 @@
                         style="@style/rg_rb_style"
                         android:text="@string/english" />
 
+                    <RadioButton
+                        android:id="@+id/rb_main_language_fr"
+                        style="@style/rg_rb_style"
+                        android:text="@string/french" />
+
                 </RadioGroup>
 
             </LinearLayout>
