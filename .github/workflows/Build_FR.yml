@@ -37,5 +37,5 @@ jobs:
         with:
           tag_name: digisms-${{ github.run_number }}
           name: Digi SMS ${{ github.run_number }}
-          body: Digi SMS — version française réalisée par Itono Studio (basée sur SmsForwarder de pppscn). Guide : docs/GUIDE_FR.md
+          body: "Digi SMS — version française réalisée par Itono Studio (basée sur SmsForwarder de pppscn). Guide : docs/GUIDE_FR.md"
           files: app/build/outputs/apk/release/*universal*.apk
