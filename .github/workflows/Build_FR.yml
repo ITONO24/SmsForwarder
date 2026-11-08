@@ -26,6 +26,9 @@ jobs:
           ./gradlew assembleRelease --no-daemon --stacktrace \
             -Dorg.gradle.jvmargs="-Xmx6g -XX:MaxMetaspaceSize=1g -Dfile.encoding=UTF-8"
 
+      - name: Rename APK
+        run: cp app/build/outputs/apk/release/*universal*.apk DigiSMS.apk
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
@@ -38,4 +41,4 @@ jobs:
           tag_name: digisms-${{ github.run_number }}
           name: Digi SMS ${{ github.run_number }}
           body: "Digi SMS — version française réalisée par Itono Studio (basée sur SmsForwarder de pppscn). Guide : docs/GUIDE_FR.md"
-          files: app/build/outputs/apk/release/*universal*.apk
+          files: DigiSMS.apk
