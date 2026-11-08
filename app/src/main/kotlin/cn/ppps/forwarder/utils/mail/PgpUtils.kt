@@ -152,7 +152,7 @@ class PgpUtils(
         val secretKeyRing = senderPGPSecretKeyRing!!
         // 安全获取第一个用户ID，避免空指针
         val userId = secretKeyRing.secretKey.publicKey.userIDs.asSequence().firstOrNull()
-            ?: throw IllegalArgumentException("PGP私钥环中未找到用户ID")
+            ?: throw IllegalArgumentException("Aucun ID utilisateur trouvé dans le trousseau privé PGP")
 
         // 使用BINARY_DOCUMENT适配复合MIME内容（二进制流），不做文本规范化
         val signingOptions = SigningOptions().addInlineSignature(
@@ -178,7 +178,7 @@ class PgpUtils(
         val protector = SecretKeyRingProtector.unlockAnyKeyWith(Passphrase.fromPassword(senderPGPSecretKeyPassword))
         val secretKeyRing = senderPGPSecretKeyRing!!
         val userId = secretKeyRing.secretKey.publicKey.userIDs.asSequence().firstOrNull()
-            ?: throw IllegalArgumentException("PGP私钥环中未找到用户ID")
+            ?: throw IllegalArgumentException("Aucun ID utilisateur trouvé dans le trousseau privé PGP")
 
         val signingOptions = SigningOptions().addInlineSignature(
             protector,
@@ -239,17 +239,17 @@ class PgpUtils(
     // 校验PGP签名必要参数，提前抛异常，避免空指针
     private fun checkPgpSignParams() {
         if (senderPGPSecretKeyRing == null) {
-            throw IllegalArgumentException("发送方PGP私钥环（senderPGPSecretKeyRing）不能为空")
+            throw IllegalArgumentException("Le trousseau privé PGP de l'expéditeur ne peut pas être vide")
         }
         if (senderPGPSecretKeyPassword.isBlank()) {
-            throw IllegalArgumentException("发送方PGP私钥密码（senderPGPSecretKeyPassword）不能为空")
+            throw IllegalArgumentException("Le mot de passe de la clé privée PGP de l'expéditeur ne peut pas être vide")
         }
     }
 
     // 校验PGP加密必要参数
     private fun checkPgpEncParams() {
         if (recipientPGPPublicKeyRing == null) {
-            throw IllegalArgumentException("接收方PGP公钥环（recipientPGPPublicKeyRing）不能为空")
+            throw IllegalArgumentException("Le trousseau public PGP du destinataire ne peut pas être vide")
         }
     }
 }

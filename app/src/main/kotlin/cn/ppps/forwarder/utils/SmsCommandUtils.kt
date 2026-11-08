@@ -44,7 +44,7 @@ class SmsCommandUtils {
             when (function) {
                 "frpc" -> {
                     if (!App.FrpclibInited) {
-                        Log.d(TAG, "还未下载Frpc库")
+                        Log.d(TAG, "La bibliothèque Frpc n'est pas encore téléchargée")
                         return false
                     }
 
@@ -57,7 +57,7 @@ class SmsCommandUtils {
                         }
 
                         if (frpcList.isEmpty()) {
-                            Log.d(TAG, "没有需要操作的Frpc")
+                            Log.d(TAG, "Aucun Frpc à traiter")
                             return@async
                         }
 

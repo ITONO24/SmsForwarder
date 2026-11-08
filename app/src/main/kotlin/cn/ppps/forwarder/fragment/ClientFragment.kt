@@ -226,7 +226,7 @@ class ClientFragment : BaseFragment<FragmentClientBinding?>(), View.OnClickListe
         when (v.id) {
             R.id.btn_wechat_miniprogram -> {
                 if (HttpServerUtils.safetyMeasures != 3) {
-                    XToastUtils.error("微信小程序只支持SM4加密传输！请前往主动控制·服务端修改安全措施！")
+                    XToastUtils.error("Le mini-programme WeChat ne prend en charge que le chiffrement SM4 ! Modifiez les mesures de sécurité dans Contrôle à distance · Serveur.")
                     return
                 }
                 CommonUtils.previewPicture(this, getString(R.string.url_wechat_miniprogram), null)
@@ -333,7 +333,7 @@ class ClientFragment : BaseFragment<FragmentClientBinding?>(), View.OnClickListe
 
         val clientSignKey = HttpServerUtils.clientSignKey
         if (HttpServerUtils.clientSafetyMeasures != 0 && TextUtils.isEmpty(clientSignKey)) {
-            if (needToast) XToastUtils.error("请输入签名密钥/RSA公钥/SM4密钥")
+            if (needToast) XToastUtils.error("Saisissez la clé de signature / clé publique RSA / clé SM4")
             return
         }
 

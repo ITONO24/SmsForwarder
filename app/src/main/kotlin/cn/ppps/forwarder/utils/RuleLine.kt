@@ -253,7 +253,7 @@ class RuleLine(line: String, lineNum: Int, beforeRuleLine: RuleLine?) {
                 //遇到空格
                 if (" " == w) {
                     buildMiddleWord = if (buildMiddleWord.isEmpty()) {
-                        throw Exception(lineNum.toString() + "行：语法错误不允许出现连续空格！")
+                        throw Exception(lineNum.toString() + " : erreur de syntaxe, espaces consécutifs interdits !")
                     } else {
                         //生成了一个中间体
                         middleList.add(buildMiddleWord.toString())
@@ -273,7 +273,7 @@ class RuleLine(line: String, lineNum: Int, beforeRuleLine: RuleLine?) {
         }
         logg("isDealValue done valueBuilder:$valueBuilder")
         if (middleList.size != 4) {
-            throw Exception(lineNum.toString() + "行配置错误：每行必须有4段组成，例如： 并且 手机号 是 相等 ")
+            throw Exception(lineNum.toString() + " : ligne incorrecte, chaque ligne doit avoir 4 éléments, ex. : AND IS PHONE_NUM EQUALS 10086")
         }
 
 
@@ -329,16 +329,16 @@ class RuleLine(line: String, lineNum: Int, beforeRuleLine: RuleLine?) {
         check = middleList[3]
         value = valueBuilder.toString()
         if (!CONJUNCTION_LIST.contains(conjunction)) {
-            throw Exception(lineNum.toString() + "行配置错误：连接词只支持：" + CONJUNCTION_LIST + " 但提供了" + conjunction)
+            throw Exception(lineNum.toString() + " : ligne incorrecte, connecteurs acceptés : " + CONJUNCTION_LIST + " mais reçu : " + conjunction)
         }
         if (!FILED_LIST.contains(field)) {
-            throw Exception(lineNum.toString() + "行配置错误：字段只支持：" + FILED_LIST + " 但提供了" + field)
+            throw Exception(lineNum.toString() + " : ligne incorrecte, champs acceptés : " + FILED_LIST + " mais reçu : " + field)
         }
         if (!SURE_LIST.contains(sure)) {
-            throw Exception(lineNum.toString() + "行配置错误 " + sure + " 确认词只支持：" + SURE_LIST + " 但提供了" + sure)
+            throw Exception(lineNum.toString() + " : ligne incorrecte " + sure + " mots de confirmation acceptés : " + SURE_LIST + " mais reçu : " + sure)
         }
         if (!CHECK_LIST.contains(check)) {
-            throw Exception(lineNum.toString() + "行配置错误：比较词只支持：" + CHECK_LIST + " 但提供了" + check)
+            throw Exception(lineNum.toString() + " : ligne incorrecte, comparateurs acceptés : " + CHECK_LIST + " mais reçu : " + check)
         }
         logg("----------$lineNum==$this")
     }

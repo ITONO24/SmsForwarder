@@ -6,6 +6,7 @@ import cn.ppps.forwarder.App
 import cn.ppps.forwarder.BuildConfig
 import cn.ppps.forwarder.utils.KEY_PREVIEW_URL
 import cn.ppps.forwarder.utils.KEY_UPDATE_URL
+import cn.ppps.forwarder.utils.XToastUtils
 import cn.ppps.forwarder.utils.update.CustomUpdateDownloader
 import cn.ppps.forwarder.utils.update.CustomUpdateFailureListener
 import cn.ppps.forwarder.utils.update.XHttpUpdateHttpServiceImpl
@@ -54,6 +55,9 @@ class XUpdateInit private constructor() {
          * 进行版本更新检查
          */
         fun checkUpdate(context: Context, needErrorTip: Boolean, joinPreviewProgram: Boolean) {
+            // Digi SMS : les mises à jour sont publiées sur github.com/ITONO24/SmsForwarder/releases
+            if (needErrorTip) XToastUtils.info("Nouvelles versions de Digi SMS : github.com/ITONO24/SmsForwarder/releases")
+            if (true) return
             if (joinPreviewProgram) {
                 checkUpdate(context, KEY_PREVIEW_URL, needErrorTip)
             } else {

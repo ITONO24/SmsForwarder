@@ -1,0 +1,33 @@
+{
+  "Code": 0,
+  "Data": [
+    {
+      "title": "Bienvenue sur Digi SMS",
+      "content": "Digi SMS transfère automatiquement vos SMS, vos appels et les notifications de vos applis (Wave, MTN MoMo, Moov Money…) vers Telegram, un e-mail, un webhook ou un autre téléphone.<br />\nUne réalisation Itono Studio."
+    },
+    {
+      "title": "Étape 1 : Réglages",
+      "content": "Onglet « Réglages » : activez ce que vous voulez transférer (SMS, appels, notifications d'applis) et accordez les autorisations demandées.<br />\nPour les notifications, Android vous demandera d'autoriser l'« accès aux notifications »."
+    },
+    {
+      "title": "Étape 2 : Canaux d'envoi",
+      "content": "Onglet « Canaux » : touchez + et choisissez où envoyer les messages (Telegram, e-mail, webhook, SMS…). Touchez « Tester » pour vérifier que ça marche."
+    },
+    {
+      "title": "Étape 3 : Règles",
+      "content": "Onglet « Règles » : choisissez le type (SMS, Appel ou Appli), la condition (ex. : le paquet est com.wave.personal, ou le message contient « reçu ») et le canal d'envoi.<br />\nSans règle, rien n'est transféré."
+    },
+    {
+      "title": "Étape 4 : Journaux",
+      "content": "Onglet « Journaux » : chaque message transféré y apparaît avec son résultat (Réussi / Échoué). Touchez une ligne pour renvoyer le message."
+    },
+    {
+      "title": "Garder l'appli active",
+      "content": "Dans Réglages → « Optimisation de la batterie », retirez Digi SMS de l'optimisation et autorisez le démarrage automatique. Sinon Android peut couper l'appli en arrière-plan."
+    },
+    {
+      "title": "Attention aux arnaques",
+      "content": "Utilisez Digi SMS uniquement sur votre propre téléphone. Si quelqu'un vous a demandé de l'installer pour « débloquer un paiement » ou « gagner de l'argent », désinstallez-la immédiatement."
+    }
+  ]
+}

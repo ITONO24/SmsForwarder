@@ -36,14 +36,14 @@ class FeishuUtils private constructor() {
                 {
                     "is_short": true,
                     "text": {
-                        "content": "**时间**\n{{MSG_TIME}}",
+                        "content": "**Heure**\n{{MSG_TIME}}",
                         "tag": "lark_md"
                     }
                 },
                 {
                     "is_short": true,
                     "text": {
-                        "content": "**来源**\n{{MSG_FROM}}",
+                        "content": "**Source**\n{{MSG_FROM}}",
                         "tag": "lark_md"
                     }
                 }

@@ -11,7 +11,7 @@
     <string name="insert_tag_receive_time">Heure de réception</string>
     <string name="insert_tag_current_time">Heure actuelle</string>
     <string name="insert_tag_device_name">Nom de l\'appareil</string>
-    <string name="insert_tag_app_version">Version SmsF</string>
+    <string name="insert_tag_app_version">Version de Digi SMS</string>
     <string name="insert_tag_call_type">Type d\'appel</string>
     <string name="insert_tag_location">Position</string>
     <string name="insert_tag_location_longitude">Longitude</string>
@@ -73,17 +73,18 @@
     <string name="about_item_wechat_miniprogram">Mini-programme WeChat</string>
     <string name="about_cache_purged">Cache vidé</string>
     <string name="about_frpc_deleted">Frpc supprimé, redémarrage de l\'appli</string>
-    <string name="about_copyright">© %1$s PPPSCN Tous droits réservés.</string>
+    <string name="about_copyright">© %1$s Itono Studio · Digi SMS
+Basé sur le projet libre SmsForwarder de pppscn (licence BSD)</string>
     <string name="about_item_open_source">Dépôt open source</string>
     <string name="about_item_github">GitHub</string>
     <string name="about_item_gitee">Gitee</string>
     <string name="about_item_donation_link">Liste des donateurs</string>
-    <string name="url_project_github">https://github.com/pppscn/SmsForwarder</string>
+    <string name="url_project_github">https://github.com/ITONO24/SmsForwarder</string>
     <string name="url_project_gitee">https://gitee.com/pp/SmsForwarder</string>
-    <string name="url_help">https://gitee.com/pp/SmsForwarder/wikis/pages</string>
+    <string name="url_help">https://github.com/ITONO24/SmsForwarder/blob/main/docs/GUIDE_FR.md</string>
     <string name="url_donation_link">https://gitee.com/pp/SmsForwarder.wiki/raw/master/%E6%89%93%E8%B5%8F%E5%90%8D%E5%8D%95.md</string>
     <string name="url_wechat_miniprogram">https://gitee.com/pp/SmsForwarder/raw/main/pic/wechat_miniprogram.jpg</string>
-    <string name="url_tips">https://gitee.com/pp/SmsForwarder.wiki/raw/master/tips_en.json</string>
+    <string name="url_tips">https://raw.githubusercontent.com/ITONO24/SmsForwarder/main/docs/tips_fr.json</string>
     <string name="lab_yes">Oui</string>
     <string name="lab_no">Non</string>
     <string name="lab_open_qq_app">Autoriser la page à ouvrir l\'appli QQ ?</string>
@@ -122,8 +123,9 @@
     <string name="copySuccess">Copié avec succès</string>
     <string name="tipServiceRunning">Le service Frpc est en cours d\'exécution</string>
     <string name="tipWaitService">Démarrage du service</string>
-    <string name="app_name">SmsForwarder</string>
-    <string name="notification_content">Pas seulement un transfert de messages,\nl\'outil indispensable des téléphones secondaires !\nGratuit et open source, rien à vendre !</string>
+    <string name="app_name">Digi SMS</string>
+    <string name="notification_content">Digi SMS — une réalisation Itono Studio
+Vos SMS, appels et notifications transférés automatiquement.</string>
     <string name="cancel">Annuler</string>
     <string name="discard">Ignorer</string>
     <string name="del">Supprimer</string>
@@ -359,7 +361,7 @@
     <string name="sim2">SIM2</string>
     <string name="mu_rule_sms_tips">Exemple de règle multiple (syntaxe dans le wiki) :\n\nAND IS PHONE_NUM EQUALS 10086\n[espace]OR IS PHONE_NUM EQUALS 10011\nAND IS MSG_CONTENT CONTAIN impayé\n\nSignification : à la réception d\'un SMS, si (le numéro est 10086 ou 10011) et que le contenu contient « impayé », le SMS est transféré.\n\nNote : l\'espace en début de ligne indique le niveau ; des règles trop complexes peuvent consommer beaucoup de mémoire !</string>
     <string name="mu_rule_call_tips">Exemple de règle multiple (syntaxe dans le wiki) :\n\nAND IS PHONE_NUM EQUALS 10086\n[espace]OR IS PHONE_NUM EQUALS 10011\nAND IS CALL_TYPE IS 3\n\nSignification : à la réception d\'un appel, si (le numéro est 10086 ou 10011) et que l\'appel est manqué, l\'appel est transféré.\n\nNote : l\'espace en début de ligne indique le niveau ; des règles trop complexes peuvent consommer beaucoup de mémoire !\n\nTypes d\'appel : 1.Entrant terminé 2.Sortant terminé 3.Manqué 4.Entrant reçu 5.Entrant décroché 6.Sortant démarré</string>
-    <string name="mu_rule_app_tips">Exemple de règle multiple (syntaxe dans le wiki) :\n\nAND IS PACKAGE_NAME EQUALS com.wave.personal\n[espace]OR IS PACKAGE_NAME EQUALS com.mtn.momo\nAND IS INFORM_CONTENT CONTAIN reçu\n\nSignification : à la réception d\'une notification d\'appli, si (le paquet est com.wave.personal ou com.mtn.momo) et que le contenu contient « reçu », la notification est transférée.\n\nNote : l\'espace en début de ligne indique le niveau ; des règles trop complexes peuvent consommer beaucoup de mémoire !</string>
+    <string name="mu_rule_app_tips">Exemple de règle multiple (syntaxe dans le wiki) :\n\nAND IS PACKAGE_NAME EQUALS com.wave.personal\n[espace]OR IS PACKAGE_NAME EQUALS com.wave.business\nAND IS INFORM_CONTENT CONTAIN reçu\n\nSignification : à la réception d\'une notification d\'appli, si (le paquet est com.wave.personal ou com.wave.business) et que le contenu contient « reçu », la notification est transférée.\n\nNote : l\'espace en début de ligne indique le niveau ; des règles trop complexes peuvent consommer beaucoup de mémoire !</string>
     <string name="post">POST</string>
     <string name="get">GET</string>
     <string name="put">PUT</string>
@@ -388,7 +390,7 @@
     <string name="system_app">Appli système</string>
     <string name="tips_get_installed_apps">Accordez l\'autorisation GET_INSTALLED_APPS</string>
     <string name="tips_notification">Accordez l\'autorisation des notifications pour garder l\'appli active !</string>
-    <string name="tips_notification_listener">Accordez à SmsForwarder l\'accès aux notifications pour pouvoir transférer celles des autres applis. Transfert automatiquement annulé !</string>
+    <string name="tips_notification_listener">Accordez à Digi SMS l\'accès aux notifications pour pouvoir transférer celles des autres applis. Transfert automatiquement annulé !</string>
     <string name="pushplus_website">Site officiel</string>
     <string name="pushplus_plus">www.pushplus.plus</string>
     <string name="pushplus_hxtrip">pushplus.hxtrip.com</string>
@@ -553,7 +555,7 @@
     <string name="auto_check">Vérif. auto</string>
     <string name="check_update">Vérifier</string>
     <string name="join_preview_program">Programme de préversion</string>
-    <string name="join_preview_program_tips">Recevez les versions hebdomadaires de SmsF pour profiter en avance des nouveautés et corrections</string>
+    <string name="join_preview_program_tips">Recevez les versions hebdomadaires pour profiter en avance des nouveautés et corrections</string>
     <string name="clear_cache">Vider</string>
     <string name="delete_frpc">Supprimer</string>
     <string name="sender_name_status">Nom/état du canal</string>
@@ -571,7 +573,7 @@
     <string name="bark_server_regex">^https?://[^/]+/[^/]+/.*</string>
     <string name="bark_server_error">Format d\'URL incorrect, ex. https://api.day.app/XXXXXXXX/</string>
     <string name="bark_group">Nom du groupe</string>
-    <string name="bark_group_tips">Facultatif, ex. SmsForwarder</string>
+    <string name="bark_group_tips">Facultatif, ex. Digi SMS</string>
     <string name="bark_icon">Icône du message</string>
     <string name="bark_icon_tips">Facultatif, URL d\'une image pas trop lourde</string>
     <string name="bark_call">Rappels répétés</string>
@@ -580,7 +582,7 @@
     <string name="bark_badge">Badge du message</string>
     <string name="bark_badge_tips">Facultatif, ex. 888</string>
     <string name="bark_url">Lien du message</string>
-    <string name="bark_url_tips">Facultatif, ex. https://github.com/pppscn/SmsForwarder</string>
+    <string name="bark_url_tips">Facultatif, ex. https://github.com/ITONO24/SmsForwarder</string>
     <string name="bark_level">Niveau de notification</string>
     <string name="bark_level_critical">Alerte critique : sonne même en mode silencieux</string>
     <string name="bark_level_active">Affichage immédiat</string>
@@ -1136,7 +1138,7 @@
     <string name="specified_sender">Canal choisi</string>
     <string name="specified_task">Tâche choisie</string>
     <string name="multi_languages">Langue</string>
-    <string name="multi_languages_tips">Langue de l\'interface de SmsF au démarrage.</string>
+    <string name="multi_languages_tips">Langue de l\'interface de Digi SMS au démarrage.</string>
     <string name="multi_languages_toast">Redémarrez l\'appli pour passer à la langue choisie.</string>
     <string name="follow_system">Auto</string>
     <string name="simplified_chinese">简体中文</string>

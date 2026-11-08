@@ -44,7 +44,7 @@ class OpenKeychainMailUtils(
 
     /** 发送加密（可选签名）邮件，公钥按收件人邮箱由OpenKeychain自动匹配 */
     fun sendEncryptedEmail(): Pair<Boolean, String> = try {
-        if (toAddress.isEmpty()) throw IllegalArgumentException("收件人邮箱（toAddress）不能为空")
+        if (toAddress.isEmpty()) throw IllegalArgumentException("L'adresse du destinataire (toAddress) ne peut pas être vide")
         val message = buildOriginalMessage()
         applyOpenKeychainToOriginalMessage(message)
         Transport.send(message)

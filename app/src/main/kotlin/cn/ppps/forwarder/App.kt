@@ -345,6 +345,12 @@ class App : Application(), CactusCallback, Configuration.Provider by Core {
         UMengInit.init(this)
         // 初始化语种切换框架
         MultiLanguages.init(this)
+        // Digi SMS : français par défaut au premier lancement
+        val digiPrefs = getSharedPreferences("digi_sms", Context.MODE_PRIVATE)
+        if (!digiPrefs.getBoolean("fr_default_applied", false)) {
+            MultiLanguages.setAppLanguage(this, Locale.FRANCE)
+            digiPrefs.edit().putBoolean("fr_default_applied", true).apply()
+        }
         // 设置语种变化监听器
         MultiLanguages.setOnLanguageListener(object : OnLanguageListener {
             override fun onAppLocaleChange(oldLocale: Locale, newLocale: Locale) {

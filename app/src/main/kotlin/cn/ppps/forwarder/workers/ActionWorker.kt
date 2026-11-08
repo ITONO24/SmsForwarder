@@ -232,7 +232,7 @@ class ActionWorker(context: Context, params: WorkerParameters) : CoroutineWorker
 
                     TASK_ACTION_FRPC -> {
                         if (!App.FrpclibInited) {
-                            writeLog("还未下载Frpc库")
+                            writeLog("La bibliothèque Frpc n'est pas encore téléchargée")
                             continue
                         }
                         val frpcSetting = Gson().fromJson(action.setting, FrpcSetting::class.java)
@@ -246,7 +246,7 @@ class ActionWorker(context: Context, params: WorkerParameters) : CoroutineWorker
                         }
 
                         if (frpcList.isEmpty()) {
-                            writeLog("没有需要操作的Frpc")
+                            writeLog("Aucun Frpc à traiter")
                             continue
                         }
 

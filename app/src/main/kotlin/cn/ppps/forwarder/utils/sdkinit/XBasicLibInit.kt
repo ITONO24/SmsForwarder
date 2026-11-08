@@ -101,7 +101,7 @@ class XBasicLibInit private constructor() {
             //设置动态申请权限切片 申请权限被拒绝的事件响应监听
             XAOP.setOnPermissionDeniedListener { permissionsDenied: List<String?>? ->
                 XToastUtils.error(
-                    "权限申请被拒绝:" + StringUtils.listToString(permissionsDenied, ",")
+                    "Autorisations refusées : " + StringUtils.listToString(permissionsDenied, ",")
                 )
             }
         }

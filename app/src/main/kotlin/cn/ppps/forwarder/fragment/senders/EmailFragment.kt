@@ -228,7 +228,7 @@ class EmailFragment : BaseFragment<FragmentSendersEmailBinding?>(), View.OnClick
                     if (!TextUtils.isEmpty(settingVo.mailType)) {
                         mailType = settingVo.mailType
                         //TODO: 替换mailType为当前语言，避免切换语言后失效，历史包袱怎么替换比较优雅？
-                        if (mailType == "other" || mailType == "其他邮箱" || mailType == "其他郵箱") {
+                        if (mailType == "other" || mailType == "autre" || mailType == "其他邮箱" || mailType == "其他郵箱") {
                             mailType = getString(R.string.other_mail_type)
                         }
                         binding!!.spMailType.setSelectedItem(mailType)

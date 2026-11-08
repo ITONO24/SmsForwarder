@@ -400,7 +400,7 @@ class CronFragment : BaseFragment<FragmentTasksConditionCronBinding?>(), View.On
             second = "*"
             binding!!.etSecond.setText(second)
             binding!!.rbSecondTypeAll.isChecked = true
-            XToastUtils.error("Cron表达式无效：" + e.message, 30000)
+            XToastUtils.error("Expression Cron invalide : " + e.message, 30000)
         }
     }
 
@@ -567,7 +567,7 @@ class CronFragment : BaseFragment<FragmentTasksConditionCronBinding?>(), View.On
             minute = "*"
             binding!!.etMinute.setText(minute)
             binding!!.rbMinuteTypeAll.isChecked = true
-            XToastUtils.error("Cron表达式无效：" + e.message, 30000)
+            XToastUtils.error("Expression Cron invalide : " + e.message, 30000)
         }
     }
 
@@ -734,7 +734,7 @@ class CronFragment : BaseFragment<FragmentTasksConditionCronBinding?>(), View.On
             hour = "*"
             binding!!.etHour.setText(hour)
             binding!!.rbHourTypeAll.isChecked = true
-            XToastUtils.error("Cron表达式无效：" + e.message, 30000)
+            XToastUtils.error("Expression Cron invalide : " + e.message, 30000)
         }
     }
 
@@ -947,7 +947,7 @@ class CronFragment : BaseFragment<FragmentTasksConditionCronBinding?>(), View.On
             day = "*"
             binding!!.etDay.setText(day)
             binding!!.rbDayTypeAll.isChecked = true
-            XToastUtils.error("Cron表达式无效：" + e.message, 30000)
+            XToastUtils.error("Expression Cron invalide : " + e.message, 30000)
         }
     }
 
@@ -1114,7 +1114,7 @@ class CronFragment : BaseFragment<FragmentTasksConditionCronBinding?>(), View.On
             month = "*"
             binding!!.etMonth.setText(month)
             binding!!.rbMonthTypeAll.isChecked = true
-            XToastUtils.error("Cron表达式无效：" + e.message, 30000)
+            XToastUtils.error("Expression Cron invalide : " + e.message, 30000)
         }
     }
 
@@ -1326,7 +1326,7 @@ class CronFragment : BaseFragment<FragmentTasksConditionCronBinding?>(), View.On
             week = "*"
             binding!!.etWeek.setText(week)
             binding!!.rbWeekTypeAll.isChecked = true
-            XToastUtils.error("Cron表达式无效：" + e.message, 30000)
+            XToastUtils.error("Expression Cron invalide : " + e.message, 30000)
         }
     }
 
@@ -1497,7 +1497,7 @@ class CronFragment : BaseFragment<FragmentTasksConditionCronBinding?>(), View.On
             year = "*"
             binding!!.etYear.setText(year)
             binding!!.rbYearTypeAll.isChecked = true
-            XToastUtils.error("Cron表达式无效：" + e.message, 30000)
+            XToastUtils.error("Expression Cron invalide : " + e.message, 30000)
         }
     }
 

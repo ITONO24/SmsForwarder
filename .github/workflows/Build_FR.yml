@@ -29,13 +29,13 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: SmsForwarder-FR
+          name: DigiSMS
           path: app/build/outputs/apk/release/*.apk
 
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: fr-build-${{ github.run_number }}
-          name: SmsForwarder FR ${{ github.run_number }}
-          body: Version française de SmsForwarder (compilée automatiquement).
+          tag_name: digisms-${{ github.run_number }}
+          name: Digi SMS ${{ github.run_number }}
+          body: Digi SMS — version française réalisée par Itono Studio (basée sur SmsForwarder de pppscn). Guide : docs/GUIDE_FR.md
           files: app/build/outputs/apk/release/*universal*.apk

@@ -61,7 +61,7 @@ class UrlSchemeUtils private constructor() {
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             try {
                 XUtil.getContext().startActivity(intent)
-                SendUtils.updateLogs(logId, 2, "调用成功")
+                SendUtils.updateLogs(logId, 2, "Appel réussi")
                 SendUtils.senderLogic(2, msgInfo, rule, senderIndex, msgId)
             } catch (e: Exception) {
                 e.printStackTrace()

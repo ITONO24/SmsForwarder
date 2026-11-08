@@ -61,7 +61,7 @@ class AppMessageConverter : MessageConverter {
         if (HttpServerUtils.safetyMeasures == 2) {
             if (TextUtils.isEmpty(HttpServerUtils.serverPrivateKey)) {
                 Log.e(TAG, "RSA解密失败: 私钥为空")
-                throw HttpException(500, "服务端未配置私钥")
+                throw HttpException(500, "Aucune clé privée configurée sur le serveur")
             }
 
             val privateKey = RSACrypt.getPrivateKey(HttpServerUtils.serverPrivateKey)
@@ -71,7 +71,7 @@ class AppMessageConverter : MessageConverter {
         } else if (HttpServerUtils.safetyMeasures == 3) {
             if (TextUtils.isEmpty(HttpServerUtils.serverSm4Key)) {
                 Log.e(TAG, "SM4解密失败: SM4密钥为空")
-                throw HttpException(500, "服务端未配置SM4密钥")
+                throw HttpException(500, "Aucune clé SM4 configurée sur le serveur")
             }
 
             val sm4Key = ConvertTools.hexStringToByteArray(HttpServerUtils.serverSm4Key)
